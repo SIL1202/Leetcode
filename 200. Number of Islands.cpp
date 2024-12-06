@@ -28,4 +28,26 @@ public:
       dfs(grid, r + dirction[i][0], c + dirction[i][1]);
     }
   }
+
+  /* void bfs(vector<vector<char>> &grid, int r, int c) {
+    queue<pair<int, int>> q;
+    grid[r][c] = '0';
+    q.push({r, c});
+
+    while (!q.empty()) {
+      auto node = q.front();
+      q.pop();
+      int row = node.first, col = node.second;
+
+      for (int i = 0; i < 4; i++) {
+        int nr = row + dirction[i][0];
+        int nc = col + dirction[i][1];
+        if (nr >= 0 && nc >= 0 && nr < grid.size() && grid[0].size() &&
+            grid[nr][nc] == '1') {
+          q.push({nr, nc});
+          grid[nr][nc] = '0';
+        }
+      }
+    }
+  } */
 };
